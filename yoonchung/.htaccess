@@ -1,0 +1,6 @@
+# Block access to .png files
+<Files *.png>
+Order Deny,Allow
+Deny from All
+</Files>
+ErrorDocument 403 /403_forbidden.html
