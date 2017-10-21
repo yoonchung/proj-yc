@@ -9,6 +9,6 @@ hooks:
       timeout: 300
       runas: ubuntu
   AfterInstall:
-    - location: scripts/restart_server.sh
+    - location: scripts/after_install.sh
       timeout: 300
       runas: ubuntu
