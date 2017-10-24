@@ -1,3 +1,3 @@
 # scripts/before_install
 #!/bin/bash
-sudo rm -f /var/www/html/*
+sudo rm -rf /var/www/html/*
