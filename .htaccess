@@ -4,4 +4,5 @@ Order Deny,Allow
 Deny from All
 </Files>
 ErrorDocument 403 /403_forbidden.html
+ErrorDocument 404 /404_notfound.html
 AddType application/x-httpd-php .html
