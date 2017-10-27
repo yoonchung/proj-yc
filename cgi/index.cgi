@@ -5,15 +5,26 @@ print '<html>';
 print '<head>';
 print '<title>Hello Word - First CGI Program</title>';
 print '</head>';
+
+# css for background
+print "<style>";
+print "body {";
+print "    background-color: lightblue;";
+print "}";
+print "</style>";
+
 print '<body>';
 
-my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime;
-my @weekday = qw(Sunday Monday Tuesday Wednesday Thursday Friday Saturday);
-my @month = qw(January February March April May June July August September October November December);
-$year += 1900;
-
-print '<h2>Hello Web World from Language CGI with Perl on $weekday[$wday], $month[$mon] $mday, $year, $hour:$min:$sec</h2>';
+# print hello world with date and time
+$datestring = localtime();
+print "<h1>Hello Web World from Language CGI with Perl on $datestring</h1>";
 print '</body>';
-print '</html>';
 
-1;
+# print environment variables 
+print "<pre>\n";
+foreach $key (sort keys(%ENV)) {
+  print "$key = $ENV{$key}<p>";
+}
+print "</pre>\n";
+
+print '</html>';

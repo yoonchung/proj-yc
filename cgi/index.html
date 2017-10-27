@@ -1,0 +1,35 @@
+<html>
+	<title>Form Collection</title>
+	<body>
+		<b>Form Collection</b><p>
+		<form id="helloform" action="echo.cgi" method="POST">
+			Enter your first name: <input type="text" name="first" size="25"><br>
+			Enter your last name:  <input type="text" name="last" size="25"><br>
+			What is your favorite color? 
+			<select name="color">
+				<option value="lightblue">Light blue</option>
+				<option value="teal">Teal</option>
+				<option value="tomato">Tomato</option>
+				<option value="purple">Purple</option>
+			</select><br>
+			Which request method you want to use?
+			<select id="mymethod" name="method">
+				<option value="get">GET</option>
+				<option value="post">POST</option>
+			</select><br>
+			<input type="submit" name="submit" value="Submit" onclick="changeMethod()">
+		</form>
+		<script type="application/javascript">
+			function changeMethod() {
+				if (document.getElementById("mymethod").value == "get") {
+					alert("using get method")
+					document.getElementById("helloform").method = "get"
+				}
+				else {
+					alert("using post method")
+					document.getElementById("helloform").method = "post"
+				}
+			}
+		</script>
+	</body>
+</html>
