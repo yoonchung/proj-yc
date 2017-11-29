@@ -2,7 +2,7 @@
 	<title>Form Collection</title>
 	<body>
 		<b>Form Collection</b><p>
-		<form id="helloform" action="echo.php" method="POST">
+		<form id="helloform" action="form.php" method="POST">
 			Enter your first name: <input type="text" name="first" size="25"><br>
 			Enter your last name:  <input type="text" name="last" size="25"><br>
 			What is your favorite color? 
@@ -22,11 +22,9 @@
 		<script type="application/javascript">
 			function changeMethod() {
 				if (document.getElementById("mymethod").value == "get") {
-					alert("using get method")
 					document.getElementById("helloform").method = "get"
 				}
 				else {
-					alert("using post method")
 					document.getElementById("helloform").method = "post"
 				}
 			}

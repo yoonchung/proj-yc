@@ -37,7 +37,7 @@
     <p>Welcome to <strong>Yoon Chung</strong>, my email address is <strong>yschung83@gmail.com</strong>.</p>
     <p>Today is <?php echo $day; ?>.</p>
     <p>Now this support auto deployment from github using CodeDeploy.</p>
-    <p>Really.</p>
+    <p>Really...</p>
     <?php
     	phpinfo();
     ?>

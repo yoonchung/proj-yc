@@ -5,14 +5,20 @@
 		<title>Hello World from php</title> 
 	</head>
 	<body>
-<?php
-	date_default_timezone_set("America/Los_Angeles");
-	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-		print "<h2>Hello ".$_POST["first"]." from a Web app written in php on ".date("Y/m/d").", ".date("h:i:sa")."</h2>";
-		print "<style> body { background: $_POST[color]; } </style>";
-	}
-	else {
-		print "<h2>Hello ".$_GET["first"]." from a Web app written in php on ".date("Y/m/d").", ".date("h:i:sa")."</h2>";
-		print "<style> body { background: $_GET[color]; } </style>";
-	}
-?>
+	<?php
+		$randomColor = sprintf('#%06X', mt_rand(0, 0xFFFFFF));
+		date_default_timezone_set("America/Los_Angeles");
+		print "<h1>Hello World from Language PHP on ".date("Y/m/d").", ".date("h:i:sa")."!</h1><br>";
+		print "RGB number used for background color is" . $randomColor ."<br>";
+		$styleBlock = sprintf('<style type="text/css">
+       		body {
+         		background-color:%s
+       		}
+    		</style>
+  			', $randomColor);
+		echo $styleBlock;
+		echo "Environmental variables: ";
+		print_r(getenv());
+	?>
+    </body>
+</html>
